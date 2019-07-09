@@ -17,3 +17,21 @@ spec:
           image: musashisakamoto/backend
           ports:
             - containerPort: 3000
+          env:
+            - name: DB_HOST
+              value: mysql
+            - name: DB_PORT
+              value: "3306"
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: dbsecret
+                  key: user
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: dbsecret
+                  key: password
+            - name: DB_DATABASE
+              value: MusashiProject
+              
