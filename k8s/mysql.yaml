@@ -27,6 +27,11 @@ spec:
         - image: musashisakamoto/mysql
           name: mysql
           env:
+            - name: MYSQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: dbsecret
+                  key: database
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:

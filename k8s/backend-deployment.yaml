@@ -32,6 +32,8 @@ spec:
                 secretKeyRef:
                   name: dbsecret
                   key: password
-            - name: DB_DATABASE
-              value: MusashiProject
-              
+            - name: MYSQL_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: dbsecret
+                  key: database
