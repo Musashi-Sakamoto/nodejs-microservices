@@ -1,5 +1,7 @@
 CREATE DATABASE IF NOT EXISTS MusashiProject;
 
-GRANT ALL PRIVILEGES ON MusashiProject.*
-TO 'dbuser'@'localhost' IDENTIFIED BY 'password'
+//ルート
+
+GRANT ALL PRIVILEGES ON *.*
+TO 'dbuser'@'%' IDENTIFIED BY 'password'
 WITH GRANT OPTION;
