@@ -24,7 +24,7 @@ spec:
         app: mysql
     spec:
       containers:
-        - image: musashisakamoto/mysql
+        - image: musashisakamoto/mysql:1.6
           name: mysql
           env:
             - name: MYSQL_DATABASE
